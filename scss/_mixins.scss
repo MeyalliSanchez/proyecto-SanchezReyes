@@ -1,0 +1,12 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+@mixin padding-left($padding-left) {
+    -webkit-padding-left: $padding-left;
+       -moz-padding-left: $padding-left;
+        -ms-padding-left: $padding-left;
+            padding-left: $padding-left;
+  }

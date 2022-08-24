@@ -1,9 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap";
-$coloruno: #146060;
-$colodos: #42332E;
-$colortres: #FFFFFF;
-$tipografia: 'roboto', sans-serif;
+@import "../scss/variables";
+@import "../scss/mixins";
+
 * {
 	padding: 0;
 	margin: 0;
@@ -71,14 +70,13 @@ li {
 	margin-bottom: 3%;
 }
 .legal {
+	@extend .contacto;
 	width: 40%;
-	margin-top: 3%;
-	margin-bottom: 3%;
+	
 }
 .cliente {
-	width: 20%;
-	margin-top: 3%;
-	margin-bottom: 3%;
+	@extend .contacto;
+	
 }
 footer {
 	display: flex;
@@ -90,16 +88,15 @@ footer {
 .seccion {
 	font-family: 'Roboto', sans-serif;
 	font-size: medium;
-	color: #42332E;
+	color: map-get($estilos, color );
 	text-align: left;
 	padding-left: 50px;
 }
 .evento {
-	font-family: 'Roboto', sans-serif;
 	font-size: large;
-	color: #42332E;
-	align-content: left;
-	padding-left: 50px;
+	@extend .seccion;
+	
+	
 }
 .picture {
 	display: grid;
@@ -193,7 +190,7 @@ p {
 }
 .botones1 {
 	width: 80%;
-	border-radius: 5px;
+	@include border-radius(5px);
 	font-family: 'roboto',sans-serif;
 	font-size: 25px;
 	color: #FFFFFF;
@@ -275,9 +272,9 @@ p {
 }
 .mail1 {
 	grid-area: 2 / 2 / 3 / 3;
-	font-family: 'Roboto', sans-serif;
+	font-family: map-get($estilos, font );
 	font-size: large;
-	color: #42332E;
+	color: map-get($estilos, color );
 }
 .icono2 {
 	grid-area: 3 / 1 / 4 / 2;
@@ -286,9 +283,9 @@ p {
 }
 .mail2 {
 	grid-area: 3 / 2 / 4 / 3;
-	font-family: 'Roboto', sans-serif;
+	font-family: map-get($estilos, font );
 	font-size: large;
-	color: #42332E;
+	color: map-get($estilos, color );
 }
 @media screen and (max-width: 769px) {
 	.gridconteiner {
